@@ -19,14 +19,14 @@ const Cart = () => {
                 </div>
 
                 <div className="row no-gutters justify-content-center">
-                    <div className="col-sm-9 p-3">
-                        {
+                    <div className="col-sm-8 p-3">
+                        {/* {
                             cartItems.length > 0 ?
                             <CartProducts/> :
                             <div className="p-3 text-center text-muted">
                                 Your cart is empty
                             </div>
-                        }
+                        } */}
 
                         { checkout && 
                             <div className="p-3 text-center text-success">
@@ -37,10 +37,17 @@ const Cart = () => {
                     </div>
                     {
                         cartItems.length > 0 && 
-                        <div className="col-sm-3 p-3">
+                        <div className="col-sm-4 p-3">
                             <div className="card card-body">
-                                <p className="mb-1">Total Items</p>
-                                <h4 className=" mb-3 txt-right">{itemCount}</h4>
+                                {/* <p className="mb-1">Total Items</p>
+                                <h4 className=" mb-3 txt-right">{itemCount}</h4> */}
+                                      {
+                                            cartItems.length > 0 ?
+                                            <CartProducts/> :
+                                            <div className="p-3 text-center text-muted">
+                                                Your cart is empty
+                                            </div>
+                                        }
                                 <p className="mb-1">Total Payment</p>
                                 <h3 className="m-0 txt-right">{formatNumber(total)}</h3>
                                 <hr className="my-4"/>

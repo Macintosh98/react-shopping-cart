@@ -10,9 +10,17 @@ const Header = () => {
 
     return ( 
         <header className={styles.header}>
-            <Link to='/'>Store</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/cart'> <CartIcon/> Cart ({itemCount})</Link>
+           <h1 style={{'color':'white'}}>McDonald's</h1>
+           <small>4.3  |  35 min  |  $400 for two</small>
+           <div className="row">
+                <div className="col-sm-6">
+                <input type="text" name="" placeholder="Search for dishes" className="form-control" id=""/>
+                
+               
+                </div>
+                <div className="col-sm-3"><button className="btn" style={{'backgroundColor':'white'}}>Veg only</button></div>
+                <div className="col-sm-3"> <button className="btn"style={{'backgroundColor':'white'}}>favourite</button></div>
+            </div>
         </header>
      );
 }
